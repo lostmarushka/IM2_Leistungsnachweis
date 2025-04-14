@@ -1,5 +1,5 @@
 # CakePHP 3
-
+# Dateien aufgelistet, die von Git ignoriert werden sollen. Sie werden folglich nicht in den Rücksetzungspunkt (=”Commit”) aufgenommen und auch nicht auf GitHub hochgeladen.
 /vendor/*
 /config/app.php
 
