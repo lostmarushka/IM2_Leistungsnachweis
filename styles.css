@@ -38,13 +38,30 @@ body {
     gap: 2rem;
     padding: 2rem;
   }
+
+  .uv-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-top: 130px;
+  }
+
+  .uv-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  .uv-header span{
+    font-size: 32px;
+  }
   
   .uv-display {
     text-align: center;
   }
   
   .uv-display h1 {
-    font-size: 6rem;
+    font-size: 200px;
     color: #ffa940;
     margin: 0;
   }
@@ -60,7 +77,7 @@ body {
   }
   
   .calculator h2 {
-    font-size: 1.5rem;
+    font-size: 32px;
   }
   
   .input-group {
