@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff8e7;
+    color: #1b1b6e;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-family:'chewy', 'regular';
+    font-size: 2.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .sonnencreme {
+    width: 25px;
+    transform: rotate(40deg);
+    margin-left: 12px;          /* etwas mehr Abstand nach links */
+    margin-top: 0;  
+  }
+  
+  .report {
+    font-size: 0.9rem;
+    color: #1b1b6e;
+    text-decoration: none;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .uv-display {
+    text-align: center;
+  }
+  
+  .uv-display h1 {
+    font-size: 6rem;
+    color: #ffa940;
+    margin: 0;
+  }
+  
+  .advice {
+    margin-top: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
+  .calculator {
+    text-align: center;
+  }
+  
+  .calculator h2 {
+    font-size: 1.5rem;
+  }
+  
+  .input-group {
+    margin: 1.5rem 0;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .options span {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1b1b6e;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    background-color: #1b1b6e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .forecast h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .forecast ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .forecast li {
+    background-color: #f0f0f0;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .forecast strong {
+    font-size: 1.2rem;
+  }
+  

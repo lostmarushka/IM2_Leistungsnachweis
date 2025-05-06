@@ -1,2 +1,4 @@
+<!-- Markdown cheatsheet für Details. Ansicht wie README auf GitHub aussieht. -->
 # IM2_Leistungsnachweis
-IM 2 Projekt - API UV Index
+## Reflexion 
+
