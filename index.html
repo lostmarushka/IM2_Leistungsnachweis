@@ -23,26 +23,26 @@
     <div class="uv-display">
       <div class="uv-header">
         <span>UV</span>
-        <h1>aktueller Wert UV API</h1>
+        <p id="uv-index"></p>
       </div>
       <p class="advice">
-        Halt vellecht mal usschau<br>nach schatte und check<br>s’Schmiär-O-Meter för din<br>Sonnecremebedarf.
+        Kommentar zom UV-Index
       </p>
     </div>
 
-    <section class="calculator">
+    <section class="SPF_Rechner">
       <h2>Schmiär-O-Meter</h2>
       <div class="inputs">
-        <div class="input-group">
+        <div class="Hauttyp">
           <label>Wähl di Huuttyp us:</label>
-          <div class="options">
+          <div class="hauttyp_options">
             <span>I</span><span>II</span><span>III</span><span>IV</span>
           </div>
         </div>
 
-        <div class="input-group">
+        <div class="Sonnenzeit">
           <label>Wie lang besch ar Sonne?</label>
-          <div class="options">
+          <div class="Sonnenzeit_options">
             <span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             <span>5h</span><span>6h</span><span>7h</span><span>8h</span>
             <span>9h</span><span>10h</span>
@@ -56,12 +56,10 @@
 
     <section class="forecast">
       <h3>Prognose</h3>
-      <ul>
-         Werte UV-Index Prognose
-      </ul>
+      <div id="uv-forecast"></div>
     </section>
   </main>
-  <script src="app.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 
