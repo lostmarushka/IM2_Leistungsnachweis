@@ -22,11 +22,11 @@ body {
   .sonnencreme {
     width: 25px;
     transform: rotate(40deg);
-    margin-left: 12px;          /* etwas mehr Abstand nach links */
+    margin-left: 12px;          
     margin-top: 0;  
   }
   
-  .report {
+  .erklärseite {
     font-size: 0.9rem;
     color: #1b1b6e;
     text-decoration: none;
