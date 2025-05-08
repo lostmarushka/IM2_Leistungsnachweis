@@ -16,28 +16,31 @@
     <div class="logo">
       SchmiärDi <img src="img/sonnecreme.png" class="sonnencreme">
     </div>
-    <a href="css/erklärseite.css" class="erklärseite">Berächnig? click me ◡̈</a>
+    <a href="css/erklärseite.css" class="erklärseite_button">Berächnig? click me ◡̈</a>
   </header>  
 
   <main>
     <div class="uv-display">
       <div class="uv-header">
-        <span>UV</span>
         <p id="uv-index"></p>
       </div>
       <p class="advice">
-        Kommentar zom UV-Index
+        <div id="uv-spruch" style="margin-top: 10px; font-style: italic;"></div>
       </p>
     </div>
 
-    <section class="SPF_Rechner">
+    <div class="SPF_Rechner">
       <h2>Schmiär-O-Meter</h2>
       <div class="inputs">
         <div class="Hauttyp">
           <label>Wähl di Huuttyp us:</label>
           <div class="hauttyp_options">
-            <span>I</span><span>II</span><span>III</span><span>IV</span>
+            <span data-description="Sehr hell, rötlich, keine Bräune">I</span>
+            <span data-description="Hell, manchmal Sonnenbrand">II</span>
+            <span data-description="Mittel, bräunt langsam">III</span>
+            <span data-description="Oliv, wenig Sonnenbrand">IV</span>
           </div>
+          <p id="hauttyp-info" class="hauttyp_info_text"></p>
         </div>
 
         <div class="Sonnenzeit">
@@ -52,12 +55,12 @@
         <button>submit</button>
         <p>Du bruchsch SPF ___.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="forecast">
+    <div class="forecast">
       <h3>Prognose</h3>
       <div id="uv-forecast"></div>
-    </section>
+    </div>
   </main>
   <script src="js/script.js"></script>
 </body>
