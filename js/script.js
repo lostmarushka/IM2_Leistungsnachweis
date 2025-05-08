@@ -1,4 +1,6 @@
 // Funktion zum Laden der UV-Daten
+let aktuellerUV = 0; // global für SPF-Berechnung
+
 async function loadData() {
     return new Promise((resolve, reject) => {
         if ("geolocation" in navigator) {
@@ -12,8 +14,9 @@ async function loadData() {
                     const response = await fetch(url);
                     const json = await response.json();
 
-                    // Aktuellen UV-Index und die nächsten 6 Stunden extrahieren
                     const uvNow = json.now.uvi;
+                    aktuellerUV = uvNow;
+
                     const uvForecast = json.forecast.slice(0, 6).map(f => ({
                         time: new Date(f.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                         uvi: f.uvi
@@ -35,7 +38,7 @@ async function loadData() {
     });
 }
 
-// Funktion zum Abrufen eines passenden Spruchs basierend auf dem UV-Index
+// Funktion für UV-Sprüche
 function getUvSpruch(uv) {
     if (uv <= 2) {
         return "Chasch ganz locker blibe – d’Sunne macht grad Pause. Aber vergiss dä Huet nöd, slaye goht immer!";
@@ -50,13 +53,13 @@ function getUvSpruch(uv) {
     }
 }
 
-// Verwendung
+// Initial laden
 loadData().then(data => {
     if (data) {
         document.getElementById("uv-index").innerText = `UV ${data.uvNow}`;
 
         const forecastEl = document.getElementById("uv-forecast");
-        forecastEl.innerHTML = ""; // Leeren, falls schon Daten drin sind
+        forecastEl.innerHTML = "";
 
         data.uvForecast.forEach(entry => {
             const box = document.createElement("div");
@@ -65,23 +68,82 @@ loadData().then(data => {
             forecastEl.appendChild(box);
         });
 
-        // UV-Spruch anzeigen
         const spruch = getUvSpruch(data.uvNow);
         document.getElementById("uv-spruch").innerText = spruch;
-
     } else {
         document.getElementById("uv-index").innerText = "UV-Daten konnten nicht geladen werden.";
     }
 });
 
-// Hauttyp-Beschreibung beim Hover anzeigen
-document.querySelectorAll('.hauttyp_options span').forEach(span => {
+// SPF-Rechner-Logik
+let gewaehlterHauttyp = null;
+let gewaehlteSonnenzeit = null;
+const berechneBtn = document.getElementById("berechne-spf");
+
+// Hauttyp auswählen
+document.querySelectorAll('.hauttyp_options span').forEach((span, index) => {
+    const desc = span.getAttribute('data-description');
+
     span.addEventListener('mouseenter', () => {
-        const desc = span.getAttribute('data-description');
-        document.getElementById('hauttyp-info').textContent = desc;
+        if (!gewaehlterHauttyp) {
+            document.getElementById('hauttyp-info').textContent = desc;
+        }
     });
 
     span.addEventListener('mouseleave', () => {
-        document.getElementById('hauttyp-info').textContent = '';
+        if (!gewaehlterHauttyp) {
+            document.getElementById('hauttyp-info').textContent = '';
+        }
     });
+
+    span.addEventListener('click', () => {
+        gewaehlterHauttyp = index + 1;
+
+        document.querySelectorAll('.hauttyp_options span').forEach(s => s.classList.remove('selected'));
+        span.classList.add('selected');
+
+        document.getElementById('hauttyp-info').textContent = desc;
+
+        berechneBtn.classList.remove('selected'); // Button zurücksetzen
+    });
+});
+
+// Sonnenzeit auswählen
+document.querySelectorAll('.Sonnenzeit_options span').forEach(span => {
+    span.addEventListener('click', () => {
+        gewaehlteSonnenzeit = parseInt(span.textContent);
+
+        document.querySelectorAll('.Sonnenzeit_options span').forEach(s => s.classList.remove('selected'));
+        span.classList.add('selected');
+
+        berechneBtn.classList.remove('selected'); // Button zurücksetzen
+    });
+});
+
+// SPF berechnen
+berechneBtn.addEventListener('click', () => {
+    if (!gewaehlterHauttyp || !gewaehlteSonnenzeit || !aktuellerUV) {
+        document.getElementById("spf-ergebnis").innerText = "Bitte alles auswählen.";
+        berechneBtn.classList.remove('selected'); // Kein Ergebnis -> kein Button-Styling
+        return;
+    }
+
+    const risiko = gewaehlterHauttyp * aktuellerUV * gewaehlteSonnenzeit;
+
+    let spf = "";
+    let tipp = "";
+
+    if (risiko < 10) {
+        spf = "LSF 20";
+        tipp = "– eher entspannt";
+    } else if (risiko <= 20) {
+        spf = "LSF 30";
+        tipp = "– nach 1.5 Stunden nachcremen";
+    } else {
+        spf = "LSF 50+";
+        tipp = "– schütz dich gut!";
+    }
+
+    document.getElementById("spf-ergebnis").innerText = `Du bruchsch ${spf} ${tipp}`;
+    berechneBtn.classList.add('selected'); // Button markieren
 });

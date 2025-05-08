@@ -16,7 +16,7 @@
     <div class="logo">
       SchmiärDi <img src="img/sonnecreme.png" class="sonnencreme">
     </div>
-    <a href="css/erklärseite.css" class="erklärseite_button">Berächnig? click me ◡̈</a>
+    <a href="html/erklärseite.html" class="erklärseite_button">Berächnig? click me ◡̈</a>
   </header>  
 
   <main>
@@ -25,7 +25,7 @@
         <p id="uv-index"></p>
       </div>
       <p class="advice">
-        <div id="uv-spruch" style="margin-top: 10px; font-style: italic;"></div>
+        <div id="uv-spruch"></div>
       </p>
     </div>
 
@@ -42,6 +42,8 @@
           </div>
           <p id="hauttyp-info" class="hauttyp_info_text"></p>
         </div>
+        
+        </div>
 
         <div class="Sonnenzeit">
           <label>Wie lang besch ar Sonne?</label>
@@ -52,8 +54,8 @@
           </div>
         </div>
 
-        <button>submit</button>
-        <p>Du bruchsch SPF ___.</p>
+        <button id="berechne-spf">submit</button>
+        <p id="spf-ergebnis">Du bruchsch SPF </p>
       </div>
     </div>
 
@@ -64,6 +66,4 @@
   </main>
   <script src="js/script.js"></script>
 </body>
-
-
 </html>

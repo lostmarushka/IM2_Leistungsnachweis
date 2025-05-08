@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff8e7;
+    color: #1b1b6e;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-family:'chewy', 'regular';
+    font-size: 2.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .sonnencreme {
+    width: 25px;
+    transform: rotate(40deg);
+    margin-left: 12px;          
+    margin-top: 0;  
+  }
+
+  .erklärseite_button {
+    font-size: 0.9rem;
+    color: #1C1C4A;
+    text-decoration: none;
+  }
