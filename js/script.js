@@ -64,10 +64,13 @@ loadData().then(data => {
         data.uvForecast.forEach(entry => {
             const box = document.createElement("div");
             box.className = "uv-box";
-            box.innerHTML = `<span>UV ${entry.uvi}</span><span>${entry.time}</span>`;
+            box.innerHTML = `
+                <div class="uv-wert">UV ${entry.uvi}</div>
+                <div class="uv-zeit">${entry.time}</div>
+            `;
             forecastEl.appendChild(box);
         });
-
+        
         const spruch = getUvSpruch(data.uvNow);
         document.getElementById("uv-spruch").innerText = spruch;
     } else {
@@ -135,13 +138,13 @@ berechneBtn.addEventListener('click', () => {
 
     if (risiko < 10) {
         spf = "LSF 20";
-        tipp = "– eher entspannt";
+        tipp = ", eher entspannt.";
     } else if (risiko <= 20) {
         spf = "LSF 30";
-        tipp = "– nach 1.5 Stunden nachcremen";
+        tipp = ", nach 1.5 stond nachcreme.";
     } else {
         spf = "LSF 50+";
-        tipp = "– schütz dich gut!";
+        tipp = ", schötz dech guet!";
     }
 
     document.getElementById("spf-ergebnis").innerText = `Du bruchsch ${spf} ${tipp}`;

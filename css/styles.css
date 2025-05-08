@@ -38,6 +38,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
+  /* margin-top: 8rem; */
 }
 
 /* UV Display */
@@ -47,23 +48,28 @@ main {
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .uv-header #uv-index {
   font-size: 5rem;
   font-weight: bolder;
   color: #FDB543;
+  margin:0;
 }
 
 #advice, #uv-spruch {
   font-style: normal;
-  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 /* SPF Rechner */
 .SPF_Rechner {
   grid-column: 2 / 4;
-  background-color: white;
+  background-color: #FFF4D2;
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -74,17 +80,24 @@ main {
   font-size: 1.5rem;
 }
 
+/* Wähl din Huuttyp us: */
 .inputs label {
   display: block;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 0.8rem;
+  margin-top: 3rem;
+  font-size: 1.2rem;
 }
 
 .hauttyp_options, .Sonnenzeit_options {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin: 1rem 0 0.8rem;
 }
 
+.sonnenzeit{
+  font-size: 1.2rem;
+}
 .hauttyp_options span,
 .Sonnenzeit_options span {
   background-color: #1C1C4A;
@@ -100,14 +113,15 @@ main {
 .Sonnenzeit_options span.selected {
   background-color: #FDB543;
   color: #1C1C4A;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .hauttyp_info_text {
   margin-top: 0.5rem;
+  margin-bottom: 5rem;
   font-size: 0.9rem;
   font-style: normal;
-  color: #555;
+  color: #1C1C4A;
   min-height: 1.2rem;
 }
 
@@ -117,40 +131,67 @@ button {
   padding: 0.7rem 1.2rem;
   border: none;
   border-radius: 12px;
-  font-size: 1rem;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin-top: 3rem;
   cursor: pointer;
 }
 
 button.selected {
   background-color: #FDB543;
-  color: #1C1C4A;
-  font-weight: bold;
+  color: white;
+}
+
+#spf-ergebnis{
+  font-size: 1.2rem;
 }
 
 /* Forecast */
 .forecast {
   grid-column: 4 / 4;
+  background-color: #FFF4D2;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.forecast h3 {
+.forecast h2 {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 #uv-forecast {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .uv-box {
-  background-color: #E9E9F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1C1C4A1A;
   color: #1C1C4A;
+  font-size: 1.2rem;
   padding: 1rem;
   border-radius: 16px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  width: 100px;
+}
+
+.uv-wert {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #1C1C4A;
+  margin-bottom: 4px; /* sorgt für etwas Abstand zur Uhrzeit */
+}
+
+.uv-zeit {
+  font-size: 0.9em;
+  color: #555;
 }
