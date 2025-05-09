@@ -55,10 +55,15 @@ main {
 }
 
 .uv-header #uv-index {
-  font-size: 5rem;
+  font-size: 10rem;
   font-weight: bolder;
-  color: #FDB543;
   margin:0;
+}
+
+.uv-label{
+  font-size: 1.5rem;
+  color: #1C1C4A;
+  font-weight: bolder;
 }
 
 #advice, #uv-spruch {
