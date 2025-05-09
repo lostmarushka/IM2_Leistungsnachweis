@@ -18,9 +18,68 @@
     </div>
   </header>  
     
+  <main>
+    <div class="erklärseite">
+      <h1>So funktioniert der Schmiär-O-Meter</h1>
+      <p>Dein Hauttyp beeinflusst, wie schnell du Sonnenbrand bekommst.</p>
+      <div class="table-container">
+        <table class="hauttyp-tabelle">
+          <thead>
+            <tr><th>Hauttyp</th><th>Beschreibung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>I</td><td>Sehr hell, rötlich, keine Bräune</td></tr>
+            <tr><td>II</td><td>Hell, manchmal Sonnenbrand</td></tr>
+            <tr><td>III</td><td>Mittel, bräunt langsam</td></tr>
+            <tr><td>IV</td><td>Oliv, wenig Sonnenbrand</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    <p>Der UV-Index-Faktor misst, wie stark die Sonnenstrahlung ist.</p>
+    <div class="table-container">
+      <table class="uv-index-tabelle">
+        <thead>
+          <tr>
+            <th>UV Index</th><th>Strahlungsstärke</th><th>Kennzeichnung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1-2</td><td>schwach</td><td class="uv schwach"></td></tr>
+          <tr><td>3-5</td><td>mittel</td><td class="uv mittel"></td></tr>
+          <tr><td>6-7</td><td>hoch</td><td class="uv hoch"></td></tr>
+          <tr><td>8-10</td><td>sehr hoch</td><td class="uv sehr-hoch"></td></tr>
+          <tr><td>11+</td><td>extrem</td><td class="uv extrem"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>➜ Je länger du in der Sonne bist, desto höher das Risiko.</p>
+    <p><a href="#">Die Formel</a> einfach erklärt:</p>
+    <div class="formel-box">
+      Risiko = Hauttyp × UV × Sonnenzeit
+    </div>
+
+    <h2>SPF Empfehlung nach Risiko-Wert:</h2>
+    <div class="table-container">
+      <table class="empfehlungstabelle">
+        <thead><tr><th>Risiko Score</th><th>Empfehlung</th></tr></thead>
+        <tbody>
+          <tr><td>&lt; 10</td><td>LSF 20, eher entspannt</td></tr>
+          <tr><td>10 - 20</td><td>LSF 30, nach 1.5 Stunden nachcremen</td></tr>
+          <tr><td>&gt; 20</td><td>LSF 50+, schützt dich gut!</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  
+    <div class="forecast">
+      <h2>Prognose</h2>
+      <div id="uv-forecast"></div>
+    </div>
   </main>
   <script src="js/script.js"></script>
 </body>
-
-
 </html>
+
+

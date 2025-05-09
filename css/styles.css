@@ -13,14 +13,14 @@ header {
 
 .logo {
   font-family:'chewy', 'regular';
-  font-size: 2.3rem;
+  font-size: 3rem;
   font-weight: bold;
   display: flex;
   align-items: center;
 }
 
 .sonnencreme {
-  width: 25px;
+  width: 35px;
   transform: rotate(40deg);
   margin-left: 12px;          
   margin-top: 0;  
@@ -38,7 +38,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
-  /* margin-top: 8rem; */
+  margin-top: 4rem;
 }
 
 /* UV Display */
