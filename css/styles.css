@@ -195,3 +195,19 @@ button.selected {
   font-size: 0.9em;
   color: #555;
 }
+
+.uv-low {
+ color: #B3E5FC !important;
+}
+.uv-moderate {
+  color: #FFE082!important;
+}
+.uv-high {
+  color: #FFB74D !important;
+}
+.uv-veryhigh {
+  color: #CE93D8 !important;
+}
+.uv-extreme {
+  color: darkred !important;
+}

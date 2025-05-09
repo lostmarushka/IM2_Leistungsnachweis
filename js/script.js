@@ -1,6 +1,15 @@
 // Funktion zum Laden der UV-Daten
 let aktuellerUV = 0; // global für SPF-Berechnung
 
+// UV-Klasse basierend auf dem UV-Index
+function getUVColorClass(uvi) {
+    if (uvi <= 2) return "uv-low";       // grünlich
+    if (uvi <= 5) return "uv-moderate";  // gelb
+    if (uvi <= 7) return "uv-high";      // hellrot
+    if (uvi <= 10) return "uv-veryhigh"; // rot
+    return "uv-extreme";                 // dunkelrot
+}
+
 async function loadData() {
     return new Promise((resolve, reject) => {
         if ("geolocation" in navigator) {
@@ -57,6 +66,10 @@ function getUvSpruch(uv) {
 loadData().then(data => {
     if (data) {
         document.getElementById("uv-index").innerText = `UV ${data.uvNow}`;
+
+        // Füge die Klasse basierend auf dem UV-Index hinzu
+        const uvClass = getUVColorClass(data.uvNow);
+        document.getElementById("uv-index").classList.add(uvClass);
 
         const forecastEl = document.getElementById("uv-forecast");
         forecastEl.innerHTML = "";
@@ -149,4 +162,9 @@ berechneBtn.addEventListener('click', () => {
 
     document.getElementById("spf-ergebnis").innerText = `Du bruchsch ${spf} ${tipp}`;
     berechneBtn.classList.add('selected'); // Button markieren
+});
+
+// Starte nur, wenn DOM geladen ist
+document.addEventListener("DOMContentLoaded", () => {
+    loadForecast();
 });
