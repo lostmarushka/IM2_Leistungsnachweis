@@ -67,7 +67,7 @@ loadData().then(data => {
     if (data) {
         document.getElementById("uv-index").innerHTML = `<span class="uv-label"> UV </span> ${data.uvNow}`;
 
-        // Füge die Klasse basierend auf dem UV-Index hinzu
+        
         const uvClass = getUVColorClass(data.uvNow);
         document.getElementById("uv-index").classList.add(uvClass);
 
@@ -161,7 +161,7 @@ berechneBtn.addEventListener('click', () => {
     }
 
     document.getElementById("spf-ergebnis").innerText = `Du bruchsch ${spf} ${tipp}`;
-    berechneBtn.classList.add('selected'); // Button markieren
+    berechneBtn.classList.add('selected'); 
 });
 
 // Starte nur, wenn DOM geladen ist

@@ -1,3 +1,4 @@
+/* Grundlayout */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -12,7 +13,7 @@ header {
 }
 
 .logo {
-  font-family:'chewy', 'regular';
+  font-family: 'Chewy', cursive;
   font-size: 3rem;
   font-weight: bold;
   display: flex;
@@ -22,8 +23,8 @@ header {
 .sonnencreme {
   width: 35px;
   transform: rotate(40deg);
-  margin-left: 12px;          
-  margin-top: 0;  
+  margin-left: 12px;
+  margin-top: 0;
 }
 
 .erklärseite_button {
@@ -33,52 +34,53 @@ header {
   margin-top: 2.5em;
 }
 
-/* Main Layout */
+/* Hauptlayout */
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(19, 1fr);
   gap: 2rem;
   padding: 2rem;
   margin-top: 4rem;
 }
 
-/* UV Display */
+/* UV-Anzeige */
 .uv-display {
-  grid-column: 1 / 2;
+  grid-column: 2 / 6;
   background-color: #FFF4D2;
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .uv-header #uv-index {
   font-size: 10rem;
   font-weight: bolder;
-  margin:0;
+  margin: 0;
 }
 
-.uv-label{
+.uv-label {
   font-size: 1.5rem;
   color: #1C1C4A;
   font-weight: bolder;
 }
 
-#advice, #uv-spruch {
-  font-style: normal;
+#advice,
+#uv-spruch {
   font-size: 1.2rem;
+  font-style: normal;
 }
 
-/* SPF Rechner */
+/* SPF-Rechner */
 .SPF_Rechner {
-  grid-column: 2 / 4;
+  grid-column: 6 / 15;
   background-color: #FFF4D2;
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .SPF_Rechner h2 {
@@ -86,24 +88,24 @@ main {
   font-size: 1.5rem;
 }
 
-/* Wähl din Huuttyp us: */
 .inputs label {
   display: block;
-  margin: 1rem 0 0.8rem;
   margin-top: 3rem;
   font-size: 1.2rem;
 }
 
-.hauttyp_options, .Sonnenzeit_options {
+.hauttyp_options,
+.Sonnenzeit_options {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 1rem 0 0.8rem;
 }
 
-.sonnenzeit{
+.sonnenzeit {
   font-size: 1.2rem;
 }
+
 .hauttyp_options span,
 .Sonnenzeit_options span {
   background-color: #1C1C4A;
@@ -114,23 +116,21 @@ main {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Styling für ausgewählte Optionen */
 .hauttyp_options span.selected,
 .Sonnenzeit_options span.selected {
   background-color: #FDB543;
   color: #1C1C4A;
-  /* font-weight: bold; */
 }
 
 .hauttyp_info_text {
-  margin-top: 0.5rem;
-  margin-bottom: 5rem;
+  margin: 0.5rem 0 5rem;
   font-size: 0.9rem;
-  font-style: normal;
   color: #1C1C4A;
   min-height: 1.2rem;
+  font-style: normal;
 }
 
+/* Buttons */
 button {
   background-color: #1C1C4A;
   color: white;
@@ -147,17 +147,17 @@ button.selected {
   color: white;
 }
 
-#spf-ergebnis{
+#spf-ergebnis {
   font-size: 1.2rem;
 }
 
-/* Forecast */
+/* UV-Vorhersage */
 .forecast {
-  grid-column: 4 / 4;
+  grid-column: 15 / 19;
   background-color: #FFF4D2;
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .forecast h2 {
@@ -177,6 +177,7 @@ button.selected {
 .uv-box {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: #1C1C4A1A;
   color: #1C1C4A;
@@ -184,9 +185,7 @@ button.selected {
   padding: 1rem;
   border-radius: 16px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100px;
 }
 
@@ -194,7 +193,7 @@ button.selected {
   font-weight: bold;
   font-size: 1.1em;
   color: #1C1C4A;
-  margin-bottom: 4px; /* sorgt für etwas Abstand zur Uhrzeit */
+  margin-bottom: 4px;
 }
 
 .uv-zeit {
@@ -202,18 +201,23 @@ button.selected {
   color: #555;
 }
 
+/* UV-Stufenfarben */
 .uv-low {
- color: #B3E5FC !important;
+  color: #B3E5FC !important;
 }
+
 .uv-moderate {
-  color: #FFE082!important;
+  color: #FFE082 !important;
 }
+
 .uv-high {
   color: #FFB74D !important;
 }
+
 .uv-veryhigh {
   color: #CE93D8 !important;
 }
+
 .uv-extreme {
   color: darkred !important;
 }

@@ -14,8 +14,8 @@ async function loadData() {
                     const response = await fetch(url);
                     const json = await response.json();
 
-                    const uvNow = json.now.uvi;  // aktuellen UV-Index abrufen
-                    aktuellerUV = uvNow;  // den aktuellen UV-Index speichern
+                    const uvNow = json.now.uvi;  
+                    aktuellerUV = uvNow;  
 
                     // UV-Prognose für die nächsten Stunden abrufen
                     const uvForecast = json.forecast.slice(0, 6).map(f => ({
@@ -39,13 +39,13 @@ async function loadData() {
     });
 }
 
-// Funktion zur Bestimmung der UV-Farbklasse (z.B. grün, gelb, rot)
+// Funktion zur Bestimmung der UV-Farbklasse
 function getUVColorClass(uvi) {
-    if (uvi <= 2) return "uv-low";  // grünlich
-    if (uvi <= 5) return "uv-moderate";  // gelb
-    if (uvi <= 7) return "uv-high";  // hellrot
-    if (uvi <= 10) return "uv-veryhigh";  // rot
-    return "uv-extreme";  // dunkelrot
+    if (uvi <= 2) return "uv-low"; 
+    if (uvi <= 5) return "uv-moderate"; 
+    if (uvi <= 7) return "uv-high";  
+    if (uvi <= 10) return "uv-veryhigh";  
+    return "uv-extreme";  
 }
 
 // UV-Index und Prognose auf der Seite anzeigen

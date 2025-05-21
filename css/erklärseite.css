@@ -1,3 +1,4 @@
+/* Grundlayout und Schrift */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -5,6 +6,31 @@ body {
   color: #1b1b6e;
 }
 
+a {
+  color: #1C1C4A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b1b6e;
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -27,15 +53,35 @@ header {
   margin-top: 0;
 }
 
-.uv-header #uv-index{
+.uv-header #uv-index {
   font-size: 2rem;
   font-weight: bold;
-  margin:0;
+  margin: 0;
 }
 
-.uv-button{
+.uv-button {
   text-decoration: none;
 }
+
+/* Hauptbereich */
+main {
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.erklärseite {
+  grid-column: 2 / 15;
+  background-color: #FFF4D2;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 7rem;
+}
+
+/* UV-Anzeige */
 .uv-display {
   grid-column: 13 / 18;
   border-radius: 16px;
@@ -43,64 +89,8 @@ header {
   text-align: center;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  margin-top: 4rem;
-}
-
-.erklärseite {
-  grid-column: 2 / 11;
-  background-color: #FFF4D2;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 7rem;
-}
-
-p{
-  font-size: 1rem;
-}
-
-h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1b1b6e;
-  text-align: left;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1b1b6e;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-th, td {
-  padding: 0.8rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #1C1C4A;
-  color: white;
-}
-
-td {
-  background-color: #fff8e7;
-}
-
 .uv {
   padding: 0.5rem;
-  /* border-radius: 8px; */
   text-align: center;
   font-weight: bold;
 }
@@ -130,57 +120,62 @@ td {
   color: white;
 }
 
-.formel-box {
-  background-color: #FFF4D2;
-  padding: 1rem;
-  text-align: left;
-  border-radius: 8px;
-  margin-top: 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-a {
-  color: #1C1C4A;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-.table-container {
-  margin-top: 2rem;
-}
-
+/* Tabellen */
+table,
 .empfehlungstabelle {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
+th, td,
 .empfehlungstabelle th,
 .empfehlungstabelle td {
   padding: 0.8rem;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
+  font-weight: bolder;
 }
 
+th,
 .empfehlungstabelle th {
   background-color: #1C1C4A;
   color: white;
 }
 
+td,
 .empfehlungstabelle td {
   background-color: #fff8e7;
 }
 
+.table-container {
+  margin-top: 2rem;
+}
+
+/* Formelbox */
+.formel-tabelle {
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  color: #1C1C4A;
+  background-color: #FFF4D2;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.formel-tabelle td {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+
+/* Prognose-Box */
 .forecast {
-  grid-column: 12 / 16;
+  grid-column: 15 / 19;
   background-color: #FFF4D2;
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: fit-content;
 }
 
@@ -202,15 +197,14 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: #1C1C4A1A;
   color: #1C1C4A;
   font-size: 1.2rem;
   padding: 1rem;
   border-radius: 16px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100px;
 }
 
@@ -227,22 +221,27 @@ a:hover {
 }
 
 .uv-label {
-  color: #1C1C4A;  /* Dunkelgrau oder eine andere Farbe */
-  font-size: 0.5em;  /* Kleinere Schrift */
+  color: #1C1C4A;
+  font-size: 0.5em;
 }
 
+/* Farbliche UV-Einstufungen (ggf. für Icons etc.) */
 .uv-low {
   color: #B3E5FC !important;
- }
- .uv-moderate {
-   color: #FFE082!important;
- }
- .uv-high {
-   color: #FFB74D !important;
- }
- .uv-veryhigh {
-   color: #CE93D8 !important;
- }
- .uv-extreme {
-   color: darkred !important;
- }
+}
+
+.uv-moderate {
+  color: #FFE082 !important;
+}
+
+.uv-high {
+  color: #FFB74D !important;
+}
+
+.uv-veryhigh {
+  color: #CE93D8 !important;
+}
+
+.uv-extreme {
+  color: darkred !important;
+}

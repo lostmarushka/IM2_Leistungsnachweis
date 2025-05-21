@@ -1,31 +1,31 @@
-<!-- commit: lokal speichern / push: hochladen auf github (Arbeitsblock abspeichern, kann dort zurückgehen, sollte was falsch laufen) / pull: code runterziehen von github-->
- 
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SchmiärDi</title>
-  <link rel="stylesheet" href="css/erklärseite.css">
-  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/erklärseite.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <header>
     <div class="logo">
-      SchmiärDi <img src="img/sonnecreme.png" class="sonnencreme">
+      SchmiärDi <img src="img/sonnecreme.png" alt="Sonnencreme Icon" class="sonnencreme" />
     </div>
     <div class="uv-display">
       <div class="uv-header">
         <a href="index.html" class="uv-button"><p id="uv-index"></p></a>
       </div>
-  </header>  
-    
+    </div>
+  </header>
+
   <main>
-    <div class="erklärseite">
+    <section class="erklärseite">
       <h1>So funktioniert der Schmiär-O-Meter</h1>
       <p>Dein Hauttyp beeinflusst, wie schnell du Sonnenbrand bekommst.</p>
+
       <div class="table-container">
         <table class="hauttyp-tabelle">
           <thead>
@@ -40,50 +40,55 @@
         </table>
       </div>
 
-    <p>Der UV-Index-Faktor misst, wie stark die Sonnenstrahlung ist.</p>
-    <div class="table-container">
-      <table class="uv-index-tabelle">
-        <thead>
+      <p>Der UV-Index-Faktor misst, wie stark die Sonnenstrahlung ist.</p>
+
+      <div class="table-container">
+        <table class="uv-index-tabelle">
+          <thead>
+            <tr><th>UV Index</th><th>Strahlungsstärke</th><th>Kennzeichnung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1-2</td><td>schwach</td><td class="uv schwach"></td></tr>
+            <tr><td>3-5</td><td>mittel</td><td class="uv mittel"></td></tr>
+            <tr><td>6-7</td><td>hoch</td><td class="uv hoch"></td></tr>
+            <tr><td>8-10</td><td>sehr hoch</td><td class="uv sehr-hoch"></td></tr>
+            <tr><td>11+</td><td>extrem</td><td class="uv extrem"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>➜ Je länger du in der Sonne bist, desto höher das Risiko.</p>
+      <p><a href="#">Die Formel</a> einfach erklärt:</p>
+
+      <div class="table-container">
+        <table class="formel-box">
           <tr>
-            <th>UV Index</th><th>Strahlungsstärke</th><th>Kennzeichnung</th>
+            <td>Risiko = Hauttyp x UV x Sonnenzeit</td>
           </tr>
-        </thead>
-        <tbody>
-          <tr><td>1-2</td><td>schwach</td><td class="uv schwach"></td></tr>
-          <tr><td>3-5</td><td>mittel</td><td class="uv mittel"></td></tr>
-          <tr><td>6-7</td><td>hoch</td><td class="uv hoch"></td></tr>
-          <tr><td>8-10</td><td>sehr hoch</td><td class="uv sehr-hoch"></td></tr>
-          <tr><td>11+</td><td>extrem</td><td class="uv extrem"></td></tr>
-        </tbody>
-      </table>
-    </div>
+        </table>
+      </div>
 
-    <p>➜ Je länger du in der Sonne bist, desto höher das Risiko.</p>
-    <p><a href="#">Die Formel</a> einfach erklärt:</p>
-    <div class="formel-box">
-      Risiko = Hauttyp × UV × Sonnenzeit
-    </div>
+      <h2>SPF Empfehlung nach Risiko-Wert:</h2>
+      <div class="table-container">
+        <table class="empfehlungstabelle">
+          <thead>
+            <tr><th>Risiko Score</th><th>Empfehlung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&lt; 10</td><td>LSF 20, eher entspannt</td></tr>
+            <tr><td>10 - 20</td><td>LSF 30, nach 1.5 Stunden nachcremen</td></tr>
+            <tr><td>&gt; 20</td><td>LSF 50+, schützt dich gut!</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <h2>SPF Empfehlung nach Risiko-Wert:</h2>
-    <div class="table-container">
-      <table class="empfehlungstabelle">
-        <thead><tr><th>Risiko Score</th><th>Empfehlung</th></tr></thead>
-        <tbody>
-          <tr><td>&lt; 10</td><td>LSF 20, eher entspannt</td></tr>
-          <tr><td>10 - 20</td><td>LSF 30, nach 1.5 Stunden nachcremen</td></tr>
-          <tr><td>&gt; 20</td><td>LSF 50+, schützt dich gut!</td></tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
-  
-    <div class="forecast">
+    <section class="forecast">
       <h2>Prognose</h2>
       <div id="uv-forecast"></div>
-    </div>
+    </section>
   </main>
+
   <script src="js/erklärseite.js"></script>
 </body>
 </html>
-
-
