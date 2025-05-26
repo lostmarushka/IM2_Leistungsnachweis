@@ -226,7 +226,7 @@ td,
   font-size: 0.5em;
 }
 
-/* Farbliche UV-Einstufungen (ggf. für Icons etc.) */
+/* Farbliche Anpassung je nach UV-Wert */
 .uv-low {
   color: #B3E5FC !important;
 }
@@ -395,11 +395,10 @@ td,
     line-height: 1.6;
   }
 
-  .SPF_Rechner {
-    order: 2;
-  }
-
   .uv-display {
     order: 1;
+  }
+  .SPF_Rechner {
+    order: 2;
   }
 }
