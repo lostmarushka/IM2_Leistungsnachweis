@@ -80,7 +80,6 @@ main {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 7rem;
 }
 
 /* UV-Anzeige */
@@ -248,11 +247,11 @@ td,
   color: darkred !important;
 }
 
-/* 📱 Responsive Layout für mobile Geräte */
+/* Responsive Layout für mobile Geräte */
 @media (max-width: 768px) {
   /* Header anpassen */
   header {
-    flex-direction: row;  /* Für Logo + UV nebeneinander */
+    flex-direction: row;  
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
@@ -274,7 +273,7 @@ td,
 
   /* UV-Display in Header rechts oben */
   .uv-display {
-    position: static; /* kein absolut, da wir flex nutzen */
+    position: static; 
     order: 2;
     border-radius: 12px;
     padding: 0.5rem 1rem;
@@ -369,6 +368,21 @@ td,
 
   .forecast {
     order: 4;
+  }
+
+  .uv-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C4A1A;
+    color: #1C1C4A;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    width: 100px;
   }
 
   .erklärseite {
