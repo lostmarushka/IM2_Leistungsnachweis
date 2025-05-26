@@ -37,7 +37,6 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #fff8e7;
 }
 
 .logo {
@@ -276,7 +275,7 @@ td,
     position: static; 
     order: 2;
     border-radius: 12px;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     background-color: transparent;
     width: auto;
     max-width: 150px;

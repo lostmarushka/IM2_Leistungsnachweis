@@ -13,7 +13,7 @@ header {
 }
 
 .logo {
-  font-family: 'Chewy', cursive;
+  font-family: 'Chewy', 'regular';
   font-size: 3rem;
   font-weight: bold;
   display: flex;
@@ -28,10 +28,10 @@ header {
 }
 
 .erklärseite_button {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #1C1C4A;
   text-decoration: none;
-  margin-top: 2.5em;
+  padding: 1.5rem;
 }
 
 /* Hauptlayout */
@@ -224,8 +224,8 @@ button.selected {
 /* Responsive Layout für mobile Geräte */
 @media (max-width: 768px) {
   /* Header anpassen */
-  header {
-    flex-direction: row; 
+   header {
+    flex-direction: row;  
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
@@ -243,6 +243,11 @@ button.selected {
     transform: rotate(40deg);
     margin-left: 10px;
     margin-top: 0;
+  }
+
+  .erklärseite_button {
+    margin: inherit;
+    font-size: 1rem;
   }
 
   /* UV-Display oberhalb schmiär o meter */
@@ -289,12 +294,6 @@ button.selected {
   /* UV-Display im Main verstecken */
   main > .uv-display {
     display: flex;
-  }
-
-  /* Andere responsive Anpassungen bleiben */
-  .erklärseite_button {
-    margin-top: 0;
-    font-size: 1rem;
   }
 
   /* Grid Column Überschreibungen */
