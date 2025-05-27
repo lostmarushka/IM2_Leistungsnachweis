@@ -121,9 +121,30 @@ main {
 }
 
 /* Tabellen */
+.table-container {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #FFF4D2;
+  margin-top: 2rem;
+}
+
+.table-container table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 90%;
+}
+
+/* Ecken in Kopfzeile */
+.table-container table thead tr:first-child th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.table-container table thead tr:first-child th:last-child {
+  border-top-right-radius: 12px;
+}
+
 table,
 .empfehlungstabelle {
-  width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
@@ -134,7 +155,6 @@ th, td,
   padding: 1rem;
   padding-right:0;
   text-align: left;
-  /* border-bottom: 1px solid #ddd; */
   font-weight: bolder;
 }
 
@@ -155,11 +175,10 @@ td,
 
 /* Formelbox */
 .formel-tabelle {
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   font-size: 1.2rem;
   color: #1C1C4A;
   background-color: #FFF4D2;
-  padding: 1rem 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
@@ -167,6 +186,8 @@ td,
 .formel-tabelle td {
   padding: 1rem;
   font-weight: bold;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 
 /* Prognose-Box */
@@ -253,18 +274,18 @@ td,
     flex-direction: row;  
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
     background-color: #fff8e7;
   }
 
   .logo {
-    font-size: 1.6rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
   }
 
   .sonnencreme {
-    width: 23px;
+    width: 26px;
     transform: rotate(40deg);
     margin-left: 10px;
     margin-top: 0;
@@ -307,12 +328,14 @@ td,
     margin-top: 2rem;
   }
 
-  /* UV-Display im Main verstecken */
+  .table-container table{
+    width: 100%;
+  }
+
   main > .uv-display {
     display: none;
   }
 
-  /* Andere responsive Anpassungen bleiben */
   .erklärseite_button {
     margin-top: 0;
     font-size: 1rem;
@@ -396,6 +419,7 @@ td,
 
   .uv-display {
     order: 1;
+    padding: 0;
   }
   .SPF_Rechner {
     order: 2;
