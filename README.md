@@ -23,3 +23,12 @@ Diese App benötigt keine Installation. Du kannst sie einfach lokal oder online 
  Responsive:
  - Die wellenförmigen Linien weggelassen, da die Boxen für eine Unterteilung sorgen.
  - Das Fragezeichen für die Verlinkung zur Erklärseite durch die gleiche Verlinkung "Berächnig? click me :)" ersetzt und rechts oben angeordnet. Das Fragezeichen hat beim Testen an meinen Klassenkamerad:innen für Verwirrung gesorgt.
+
+ ## Learnings
+ - UX-Design ist ein dynamischer Prozess: Das ursprüngliche UX-Design kann sich im Verlauf der Webentwicklung verändern – besonders dann, wenn man noch wenig Erfahrung im Webdesign hat.
+ - Reduziertes Design zahlt sich aus: Die ursprünglich in Figma entworfenen Slider für die Auswahl von Hauttyp und Sonnenzeit sahen zwar ansprechend aus, wären aber weniger benutzerfreundlich gewesen. Deshalb: simpel bleiben – die Entscheidung für einfache Auswahlboxen war sinnvoll.
+ - Egal ob im css oder JavaScript, Beschriftungen im Code selber helfen enorm eine klare Übersicht zu behalten. Ebenfalls findet man bei einer guten Strukturierung Fehler schneller.
+ 
+ ## Schwierigkeiten
+ - Berechnungslogik für den SPF-Wert: Ich musste zunächst herausfinden, wie ich den „Schmiär-O-Meter“ technisch umsetzen kann. Mithilfe von Informationen des BAG zum UV-Index und der Hauttyp-Einteilung von MED konnte ich mit Unterstützung von ChatGPT eine passende Berechnungsformel in JavaScript entwickeln.
+ - Responsive Design: Eine Herausforderung war es, die Anordnung der Elemente so zu gestalten, dass sie auf verschiedenen Bildschirmgrössen stimmig und funktional bleibt.
