@@ -238,7 +238,7 @@ td,
 
 .uv-zeit {
   font-size: 0.9em;
-  color: #555;
+  color: #1C1C4A;
 }
 
 .uv-label {
@@ -316,7 +316,7 @@ td,
   .uv-spruch-container p {
     margin: 0;
     font-size: 0.85rem;
-    color: #555;
+    color: #1C1C4A;
   }
 
   /* Hauptbereich anpassen */
