@@ -268,7 +268,7 @@ td,
 }
 
 /* Responsive Layout für mobile Geräte */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   /* Header anpassen */
   header {
     flex-direction: row;  

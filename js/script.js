@@ -150,13 +150,13 @@ berechneBtn.addEventListener('click', () => {
     let tipp = "";
 
     if (risiko < 10) {
-        spf = "LSF 20";
+        spf = "SPF 20";
         tipp = ", eher entspannt.";
     } else if (risiko <= 20) {
-        spf = "LSF 30";
+        spf = "SPF 30";
         tipp = ", nach 1.5 stond nachcreme.";
     } else {
-        spf = "LSF 50+";
+        spf = "SPF 50+";
         tipp = ", schötz dech guet!";
     }
 
