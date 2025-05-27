@@ -6,11 +6,6 @@ body {
   color: #1b1b6e;
 }
 
-a {
-  color: #1C1C4A;
-  text-decoration: none;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -30,6 +25,11 @@ h1, h2 {
 
 h2 {
   text-align: left;
+}
+
+a.Logo-Link {
+  color: #1C1C4A;
+  text-decoration: none;
 }
 
 /* Header */
@@ -55,7 +55,7 @@ header {
 }
 
 .uv-header #uv-index {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin: 0;
 }

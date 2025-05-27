@@ -34,6 +34,11 @@ header {
   padding: 1.5rem;
 }
 
+a.Logo-Link {
+  color: #1C1C4A;
+  text-decoration: none;
+}
+
 /* Hauptlayout */
 main {
   display: grid;
