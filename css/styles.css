@@ -234,7 +234,7 @@ button.selected {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #fff8e7;
+    background-color: #fff8e7; 
   }
 
   .logo {
@@ -270,6 +270,7 @@ button.selected {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #FFF4D2;
   }
 
   /* UV-Index und Spruch kleiner */
