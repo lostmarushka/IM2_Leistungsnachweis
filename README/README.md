@@ -22,7 +22,7 @@ Diese App benötigt keine Installation. Du kannst sie einfach lokal oder online 
 
  Responsive:
  - Die wellenförmigen Linien weggelassen, da die Boxen für eine Unterteilung sorgen.
- - Das Fragezeichen für die Verlinkung zur Erklärseite durch die gleiche Verlinkung "Berächnig? click me :)" ersetzt und rechts oben angeordnet. Das Fragezeichen hat beim Testen an meinen Klassenkamerad:innen für Verwirrung gesorgt.
+ - Das Fragezeichen für die Verlinkung zur Erklärseite durch die gleiche Verlinkung "Berächnig?" ersetzt und rechts oben angeordnet. Das Fragezeichen hat beim Testen an meinen Klassenkamerad:innen für Verwirrung gesorgt.
 
  ## Learnings
  - UX-Design ist ein dynamischer Prozess: Das ursprüngliche UX-Design kann sich im Verlauf der Webentwicklung verändern – besonders dann, wenn man noch wenig Erfahrung im Webdesign hat.
