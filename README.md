@@ -1,5 +1,5 @@
 <!-- Markdown cheatsheet für Details. Ansicht wie README auf GitHub aussieht. -->
-# ☀️ UV-Checker & Sonnencreme-Rechner
+# ☀️ SchmiärDi
 
 Eine Web-App, die aktuelle UV-Daten an deinem Standort anzeigt und dabei hilft, den passenden Lichtschutzfaktor (SPF) für deinen Hauttyp und die geplante Sonnenzeit zu berechnen.
 
