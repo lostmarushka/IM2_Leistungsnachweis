@@ -60,10 +60,18 @@
       <p>➜ Je länger du in der Sonne bist, desto höher das Risiko.</p>
 
       <div class="table-container">
-        <p>Die Formel einfach erklärt:</p>
+        <p>Die Berechnung vom empfohlenen SPF:</p>
         <table class="formel-tabelle">
           <tr>
-            <td>Risiko = Hauttyp × UV × Sonnenzeit</td>
+            <td>
+              <div class="formel-wrapper">
+                <span class="formel-math">
+                  \(
+                  \frac{\text{Geplante Sonnenzeit (in Minuten)}}{\text{Eigenschutzzeit (in Minuten)} \times \left(\frac{8}{\text{UV-Index}}\right)}
+                  \)
+                </span>
+              </div>
+            </td>
           </tr>
         </table>
       </div>
@@ -91,4 +99,8 @@
 
   <script src="js/erklärseite.js"></script>
 </body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </html>

@@ -140,28 +140,45 @@ document.querySelectorAll('.Sonnenzeit_options span').forEach(span => {
 berechneBtn.addEventListener('click', () => {
     if (!gewaehlterHauttyp || !gewaehlteSonnenzeit || !aktuellerUV) {
         document.getElementById("spf-ergebnis").innerText = "Bitte alles auswählen.";
-        berechneBtn.classList.remove('selected'); // Kein Ergebnis -> kein Button-Styling
+        berechneBtn.classList.remove('selected');
         return;
     }
 
-    const risiko = gewaehlterHauttyp * aktuellerUV * gewaehlteSonnenzeit;
+    // Hauttyp in Eigenschutzzeit (in Minuten)
+    const hauttypMinuten = [10, 15, 25, 35]; // Typ I–IV
+    const eigenschutzzeit = hauttypMinuten[gewaehlterHauttyp - 1];
+
+    // UV-Anpassung (UV 8 als Standard = 100%)
+    const uvFaktor = 8 / aktuellerUV;
+    const angepassteSchutzzeit = eigenschutzzeit * uvFaktor;
+
+    // Sonnenzeit in Minuten
+    const geplanteSonnenzeit = gewaehlteSonnenzeit * 60;
+
+    // Benötigter SPF
+    const spfRoh = geplanteSonnenzeit / angepassteSchutzzeit;
+    const spfEmpfohlen = Math.ceil(spfRoh);
+
+    // Effektive Schutzdauer (2/3-Regel)
+    const effektiveDauer = Math.floor((spfEmpfohlen * angepassteSchutzzeit) * 2 / 3);
 
     let spf = "";
-    let tipp = "";
-
-    if (risiko < 10) {
+    if (spfEmpfohlen <= 20) {
         spf = "SPF 20";
-        tipp = ", eher entspannt.";
-    } else if (risiko <= 20) {
+    } else if (spfEmpfohlen <= 30) {
         spf = "SPF 30";
-        tipp = ", nach 1.5 stond nachcreme.";
     } else {
         spf = "SPF 50+";
-        tipp = ", schötz dech guet!";
     }
 
-    document.getElementById("spf-ergebnis").innerText = `Du bruchsch ${spf} ${tipp}`;
-    berechneBtn.classList.add('selected'); 
+    const stunden = Math.floor(effektiveDauer / 60);
+    const minuten = effektiveDauer % 60;
+    const zeitText = stunden > 0 ? `${stunden}h ${minuten}min` : `${minuten}min`;
+
+    const tipp = `Nacheschmiäre i ca. ${zeitText}.`;
+
+    document.getElementById("spf-ergebnis").innerHTML = `Du bruchsch <strong>${spf}</strong>. ${tipp}`;
+    berechneBtn.classList.add('selected');
 });
 
 // Starte nur, wenn DOM geladen ist
