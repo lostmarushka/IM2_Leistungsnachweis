@@ -195,9 +195,17 @@ td,
 .formel-tabelle td {
   padding: 1rem;
   font-weight: bold;
-  border-top-right-radius: 12px;
+}
+
+/* Ecken gezielt abrunden */
+.formel-tabelle tr:first-child td:first-child {
   border-top-left-radius: 12px;
 }
+
+.formel-tabelle tr:first-child td:last-child {
+  border-top-right-radius: 12px;
+}
+
 
 /* Prognose-Box */
 .forecast {
@@ -434,10 +442,8 @@ td,
   }
 
   .formel-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
+    border-radius: 12px !important;
+    overflow: hidden;
   }
   
   .formel-label {
@@ -448,6 +454,8 @@ td,
   .formel-math {
     flex: 1;
     min-width: 200px;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .uv-display {
