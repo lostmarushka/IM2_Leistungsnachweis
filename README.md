@@ -32,3 +32,6 @@ Diese App benötigt keine Installation. Du kannst sie einfach lokal oder online 
  ## Schwierigkeiten
  - Berechnungslogik für den SPF-Wert: Ich musste zunächst herausfinden, wie ich den „Schmiär-O-Meter“ technisch umsetzen kann. Mithilfe von Informationen des BAG zum UV-Index und der Hauttyp-Einteilung von MED konnte ich mit Unterstützung von ChatGPT eine passende Berechnungsformel in JavaScript entwickeln.
  - Responsive Design: Eine Herausforderung war es, die Anordnung der Elemente so zu gestalten, dass sie auf verschiedenen Bildschirmgrössen stimmig und funktional bleibt.
+
+## Prompt Schmiär-O-Meter Chat GPT
+- Wie kann ich die Formel "Empfohlene SPF = Geplante Sonnenzeit in Minuten / ((Eigenschutzzeit in Minutenumsetzen)x (8/UV-Index))" in JavaScript, sodass sie die vorhandenen Infos verwendet von der API und der eingegebenen Infos (Hauttyp, Sonnenzeit). Die Info findest du im beigefügten html und js file.
