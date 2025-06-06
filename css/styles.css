@@ -229,6 +229,7 @@ button.selected {
 
 /* Responsive Layout für mobile Geräte */
 @media (max-width: 992px) {
+
   /* Header anpassen */
    header {
     flex-direction: row;  
@@ -290,6 +291,7 @@ button.selected {
 .advice {
   text-align: center;
 }
+
   /* Hauptbereich anpassen */
   main {
     display: flex !important;
