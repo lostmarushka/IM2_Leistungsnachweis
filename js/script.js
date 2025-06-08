@@ -3,11 +3,11 @@ let aktuellerUV = 0; // global für SPF-Berechnung
 
 // UV-Klasse basierend auf dem UV-Index
 function getUVColorClass(uvi) {
-    if (uvi <= 2) return "uv-low";       // grünlich
-    if (uvi <= 5) return "uv-moderate";  // gelb
-    if (uvi <= 7) return "uv-high";      // hellrot
-    if (uvi <= 10) return "uv-veryhigh"; // rot
-    return "uv-extreme";                 // dunkelrot
+    if (uvi <= 2) return "uv-low";       
+    if (uvi <= 5) return "uv-moderate";  
+    if (uvi <= 7) return "uv-high";      
+    if (uvi <= 10) return "uv-veryhigh"; 
+    return "uv-extreme";               
 }
 
 async function loadData() {
@@ -120,7 +120,7 @@ document.querySelectorAll('.hauttyp_options span').forEach((span, index) => {
 
         document.getElementById('hauttyp-info').textContent = desc;
 
-        berechneBtn.classList.remove('selected'); // Button zurücksetzen
+        berechneBtn.classList.remove('selected'); 
     });
 });
 
@@ -132,7 +132,7 @@ document.querySelectorAll('.Sonnenzeit_options span').forEach(span => {
         document.querySelectorAll('.Sonnenzeit_options span').forEach(s => s.classList.remove('selected'));
         span.classList.add('selected');
 
-        berechneBtn.classList.remove('selected'); // Button zurücksetzen
+        berechneBtn.classList.remove('selected'); 
     });
 });
 
@@ -145,7 +145,7 @@ berechneBtn.addEventListener('click', () => {
     }
 
     // Hauttyp in Eigenschutzzeit (in Minuten)
-    const hauttypMinuten = [10, 15, 25, 35]; // Typ I–IV
+    const hauttypMinuten = [10, 15, 25, 35]; 
     const eigenschutzzeit = hauttypMinuten[gewaehlterHauttyp - 1];
 
     // UV-Anpassung (UV 8 als Standard = 100%)

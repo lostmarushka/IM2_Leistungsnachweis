@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Die entsprechende Farbe für den UV-Index anwenden
             const uvClass = getUVColorClass(data.uvNow);
-            uvElement.classList.add(uvClass); // Farbe durch CSS-Klasse anwenden
+            uvElement.classList.add(uvClass); 
 
             // Prognose anzeigen
             const forecastEl = document.getElementById("uv-forecast");
-            forecastEl.innerHTML = "";  // Vorherige Prognose entfernen
+            forecastEl.innerHTML = "";  
 
             // Für jede Vorhersage die Zeit und den UV-Wert anzeigen
             data.uvForecast.forEach(entry => {
